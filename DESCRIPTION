@@ -1,8 +1,8 @@
 Package: GlacieR
 Type: Package
 Title: Keep Up To Date With Data Snapshots
-Version: 0.1.0
-Author: Who wrote it
+Version: 0.2.0
+Author: Joseph Osborne
 Maintainer: Joseph Osborne <joseph.osborne@edit.co.uk>
 Description: Uses date stamping to version flat files, and includes 
   functions to get the most recent one.

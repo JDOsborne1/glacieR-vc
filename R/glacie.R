@@ -1,10 +1,10 @@
 #' Find Files
 #'  Finding the files in the directory which match the filename
 #'
-#' @param filename
-#' @param directory
+#' @param filename The name of the file you are searching for in the path
+#' @param directory The path you are searching for the file in
 #'
-#' @return
+#' @return gives a vector of strings with the filenames in
 #' @export
 #'
 #' @examples
@@ -16,9 +16,9 @@ find_files <- function(filename, path){
 #' Get Max
 #'   Get the most recent date of the date stamps used in the files
 #'
-#' @param files
+#' @param files A vector of filenames with date stamps in the YYYY-MM-DD format
 #'
-#' @return
+#' @return The Maximum date out of all those date stamps
 #' @export
 #'
 #' @examples
@@ -34,9 +34,9 @@ get_max <- function(files){
 #' Latest File
 #'   Function to get the filename of the most recent file
 #'
-#' @param files
+#' @param files A set of filenames
 #'
-#' @return
+#' @return The full filename of the most recent file in that set
 #' @export
 #'
 #' @examples
@@ -51,11 +51,11 @@ latest_file <- function(files){
 #' Get Face Function
 #'   gets the full  path of the face of the glacier, the most recent snapshot of the data
 #'
-#' @param filename
-#' @param path
-#' @param legacy_time
+#' @param filename The file you are searching for
+#' @param path the location where the files are versioned
+#' @param legacy_time How many days ago is a file still considered modern 
 #'
-#' @return
+#' @return The full path of the most recent version of the file, can be used in a reader function
 #' @export
 #'
 #' @examples
