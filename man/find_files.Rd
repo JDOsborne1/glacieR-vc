@@ -8,7 +8,12 @@
 find_files(filename, path)
 }
 \arguments{
-\item{directory}{}
+\item{filename}{The name of the file you are searching for in the path}
+
+\item{directory}{The path you are searching for the file in}
+}
+\value{
+gives a vector of strings with the filenames in
 }
 \description{
 Find Files

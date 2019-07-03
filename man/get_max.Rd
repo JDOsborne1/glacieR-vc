@@ -8,7 +8,10 @@
 get_max(files)
 }
 \arguments{
-\item{files}{}
+\item{files}{A vector of filenames with date stamps in the YYYY-MM-DD format}
+}
+\value{
+The Maximum date out of all those date stamps
 }
 \description{
 Get Max

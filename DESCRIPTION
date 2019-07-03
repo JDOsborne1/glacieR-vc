@@ -6,7 +6,7 @@ Author: Joseph Osborne
 Maintainer: Joseph Osborne <joseph.osborne@edit.co.uk>
 Description: Uses date stamping to version flat files, and includes 
   functions to get the most recent one.
-License: GPL
+License: CCBY-4.0
 Encoding: UTF-8
 LazyData: true 
 RoxygenNote: 6.1.1

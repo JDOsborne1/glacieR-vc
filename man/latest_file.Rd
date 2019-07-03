@@ -8,7 +8,10 @@
 latest_file(files)
 }
 \arguments{
-\item{files}{}
+\item{files}{A set of filenames}
+}
+\value{
+The full filename of the most recent file in that set
 }
 \description{
 Latest File

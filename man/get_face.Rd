@@ -8,7 +8,14 @@
 get_face(filename, path = getwd(), legacy_time = 10)
 }
 \arguments{
-\item{legacy_time}{}
+\item{filename}{The file you are searching for}
+
+\item{path}{the location where the files are versioned}
+
+\item{legacy_time}{How many days ago is a file still considered modern}
+}
+\value{
+The full path of the most recent version of the file, can be used in a reader function
 }
 \description{
 Get Face Function
