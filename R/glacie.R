@@ -65,7 +65,9 @@ get_face <- function(filename, path = getwd(), legacy_time = 10){
   require(dplyr)
   files <- list.files(path, pattern = filename)
   #if(files %>% get_max() + days(legacy_time) < Sys.Date()) print(paste0("File is more than ",legacy_time, " out of date, consider rerunning the data prep"))
-  out <- file.path(path, files %>% latest_file())
+  #out <- file.path(path, files %>% latest_file())
+  out <- paste0(path, files %>% latest_file())
+
   return(out)
 }
 
