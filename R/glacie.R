@@ -24,6 +24,7 @@ find_files <- function(filename, path){
 #' @examples
 get_max <- function(files){
   require(dplyr)
+  require(stringr)
   out <- files %>%
     str_match("\\d{4}-\\d{2}-\\d{2}") %>%
     as.Date() %>%
@@ -53,7 +54,7 @@ latest_file <- function(files){
 #'
 #' @param filename The file you are searching for
 #' @param path the location where the files are versioned
-#' @param legacy_time How many days ago is a file still considered modern 
+#' @param legacy_time How many days ago is a file still considered modern
 #'
 #' @return The full path of the most recent version of the file, can be used in a reader function
 #' @export
@@ -63,8 +64,10 @@ get_face <- function(filename, path = getwd(), legacy_time = 10){
   require(lubridate)
   require(dplyr)
   files <- list.files(path, pattern = filename)
-  if(files %>% get_max() + days(legacy_time) < Sys.Date()) print(paste0("File is more than ",legacy_time, " out of date, consider rerunning the data prep"))
-  out <- file.path(path, files %>% latest_file())
+  #if(files %>% get_max() + days(legacy_time) < Sys.Date()) print(paste0("File is more than ",legacy_time, " out of date, consider rerunning the data prep"))
+  #out <- file.path(path, files %>% latest_file())
+  out <- paste0(path, files %>% latest_file())
+
   return(out)
 }
 
