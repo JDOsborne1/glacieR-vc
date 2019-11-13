@@ -7,7 +7,15 @@
 
 <!-- badges: end -->
 
-The goal of GlacieR is to …
+The goal of GlacieR is to provide a low tech implementation of data
+versioning. It does this by providing an interface layer to intermediate
+flat files which chooses the most recent version, provided it follows a
+fairly straightforward naming convention. To accelerate the process of
+saving files in this manner it also makes use of some file saving
+helpers.
+
+This package leverages the excellent `{config}` package, and will have
+some inherited idiosyncracies on top of the many author introduced ones.
 
 ## Installation
 
